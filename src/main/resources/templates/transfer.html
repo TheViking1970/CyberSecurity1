@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Transfer VirtualCoins</title>
+    </head>
+    <body>
+
+        <h1>Transfer VirtualCoins</h1>
+
+        <form action="#" th:action="@{/transfer}" method="POST">
+            <p><label for="reciever">Reciever</label>: <input type="text" name="reciever" id="reciever"/></p>
+            <p><label for="amount">Amount</label>: <input type="text" name="amount" id="amount"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+        <p></p><p></p>
+
+        <a th:href="@{/home}">Return to homepage.</a>
+
+    </body>
+</html>

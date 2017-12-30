@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>ADMINS PAGE</title>
+    </head>
+    <body>
+
+        <h1>This is the Admins-page with vital information about the site!</h1>
+
+        <h2>Known security flaws in our design - but tell NO-ONE!</h2>
+        
+        <ul>
+            <li>Change password of ANY user!</li>
+            <li>Cross Site Scripting possible in messages!</li>
+            <li>Sensitive Data Exposure, managers can also view users passwords, not only admins!</li>
+            <li>No CSRF-checks done when transfering funds!</li>
+            <li>Any logged in user can access this page!</li>
+        </ul>
+        
+        <p></p><p></p>
+        
+        <a th:href="@{/home}">Return to homepage.</a>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>List of messages</title>
+    </head>
+    <body>
+
+        <h1>List of messages in the system</h1>
+
+        <h2>Add a message:</h2>
+        <form action="#" th:action="@{/messages}" method="post">
+            <input type="hidden" name="name" th:value="${username}"/>
+            <table>
+                <tr>
+                    <td>MESSAGE: </td>
+                    <td><textarea name="message"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="SUBMIT"/></td>
+                </tr>
+            </table>
+        </form>
+        
+        <p></p>
+        
+        <table>
+            <tr>
+                <td>NAME</td><td>MESSAGE</td>
+            </tr>
+            <tr th:each="message : ${messages}">
+                <td th:utext="${message.name}"></td>
+                <td th:utext="${message.message}"></td>
+            </tr>
+        </table>
+
+        <p></p><p></p>
+        
+        <a th:href="@{/home}">Return to homepage.</a>
+
+    </body>
+</html>

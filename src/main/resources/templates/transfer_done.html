@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Transfer done!</title>
+    </head>
+    <body>
+
+        <h1>Transfer done!</h1>
+        <p>Transferred <span th:text="${amount}"></span> to <span th:text="${reciever}"></span></p>
+
+        <p></p><p></p>
+        
+        <a th:href="@{/home}">Return to homepage.</a>
+
+    </body>
+</html>
